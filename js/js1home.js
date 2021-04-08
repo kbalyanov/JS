@@ -1,11 +1,11 @@
-let p = 58
-let res = 56 % 10 + (56-56 % 10)/10
-console.log(res)
+// let n = 56;
+// p = ;
+
 
 // # 2
 let h = 1, k = 2;
-k = 1;
-h = 2;
+k = k - h;
+h = k + k;
 console.log(h, k)
 
 // # 3
