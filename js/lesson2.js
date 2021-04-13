@@ -43,7 +43,7 @@ for (let i = 40 ; i >= 1; i -=2 ) {
 }
 
 // # 5
-let n = 15; 
+let n = 10; 
 let fib = [0, 1];  
 for (let o = 2; o < n; o ++) {  
   fib[o] = fib[o-1] + fib[o-2];
@@ -53,8 +53,17 @@ console.log(fib.slice(0,n));
 // # 6 
 for (let j = 1; j <= 9; j++){  
  for (let l = 1; l <=9; l++) {
-    console.log(`${l}*${l}=${l*j}`)
+    console.log(`${ l }*${ l }=${ l * j }`)
 
  }
  
+}
+let minimum = 1, maximum = 100;
+while( true) { //1 - "да ", 2 "нет"
+     // tmp = minimum + maximum /2
+     //answer =  это число равно tmp?   prompt
+    // (if) усли answer равно 1-> break
+    // answer = это число  меньше tmp?
+    // если answer равно 1 -> maximum = tmp
+    // если равно 0 -.> maximum = tmp
 }
