@@ -16,12 +16,13 @@ let startUp = [];
 function range(start, end, step=1){
     let val = []
     for (let i = start; i <= end; i +=step){
-    val.push.apply(startUp=i);
-    val += 1;
+    val.push(startUp +=i);
+    // val += 1;
     }
     return startUp;
 }
-console.log(range(4,2,7))
+let pushnum = range(1,10,3)
+console.log(pushnum)
 
 // function checkSpam(text,...words)
 //     let sttext = text.split('');
