@@ -12,16 +12,15 @@ function count(num){
 let hey = count(7);
 console.log(hey)
 
-let startUp = [];
+// let startUp = [];
 function range(start, end, step=1){
     let val = []
     for (let i = start; i <= end; i +=step){
-    val.push(startUp +=i);
-    // val += 1;
+    val.push(i);
     }
-    return startUp;
+    return val;
 }
-let pushnum = range(1,10,3)
+let pushnum = range(1,20,3)
 console.log(pushnum)
 
 // function checkSpam(text,...words)
