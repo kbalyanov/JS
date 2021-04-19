@@ -9,29 +9,28 @@
 // let words = text.includes("дом");
 // console.log(words)
 
-let str = "дом встречается в строке дом домик домой одомашненный";
+let text = "дом встречается в строке дом домик домой одомашненный дом";
+let texting = "дом"
 
-function sameword(){
+function sameword(text,texting){
 let count = 0;
-let text = str.indexOf('дом');
-while (text !== -1) {
+let word = 0;
+let fword =0;
+while (fword >= 0) {
+    fword = text.indexOf(texting,word)
+    if (fword >=0){
   count++;
-  text = str.indexOf('дом', text + 1);
+  word = fword + texting.length;
+    }
 }
-return count;
+return count ;
 
 }
-console.log(sameword(str))
+console.log(sameword(text,texting));
 
 // let pal = "";
 // let text = pal.slice
 
-function list() {
-    return Array.prototype.slice.call(arguments, 0);
-  }
-  
-  let list1 = list(1, 2, 3); 
 
-  console.log(list1)
 
 
