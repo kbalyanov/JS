@@ -139,7 +139,6 @@ function sub(x){
 
 let subSix = sub(6);
 
-
 res = subSix(10);
 console.log(res);
 res = subSix(5);
