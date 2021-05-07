@@ -118,8 +118,7 @@ let text = "Lorem error ipsum dolor sit amet consectetur adipisicin"+
 
 let checkSpam = (text,...spamWords) => {
     let frequency = [];
-    frequency.length = spamWords.length;
-    let wordsArr = text.split("");
+    let wordsArr = text.split(" ");
 
     for(let spamWordIndex = 0;
          spamWordIndex < spamWords.length;
@@ -128,6 +127,7 @@ let checkSpam = (text,...spamWords) => {
 
     for (let textWord of wordsArr) {
         if(textWord === spamWords[spamWordIndex]){
+            debugger
             if(frequency[spamWordIndex]){
               frequency[spamWordIndex]++;
             } else {
@@ -138,5 +138,10 @@ let checkSpam = (text,...spamWords) => {
 }
     return frequency;
 }
-console.log(checkSpam(text,"tumble", "mumble"))
-checkSpam(text, "tumble", "mumble");
+console.log(checkSpam(text,"tumble", "mumble", "error"),"checkSpam")
+
+let {name: userName, age: userAge} = {name:"Anna", age: 33};
+console.log(userName);
+console.log(userAge);
+
+//checkSpam(text, "tumble", "mumble");
