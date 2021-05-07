@@ -12,23 +12,23 @@
         <form action="#" method="POST" name="exam">
             <div>
                 <label for="task">Название задачи</label>
-                <input name="task" id="task" type="text">
+                <input name="task" id="task" type="text" class="task">
                 <!-- <span id="password-icon" class="material-icons show">visibility_off</span> -->
                 <span id="task-error"></span>
             </div>
             <div>
-                <label for="about_task">Описание задачи</label>
-                <textarea name="about_task" id="about_task" type="text"></textarea>
+                <label for="about_task" class="about_task_">Описание задачи</label>
+                <textarea name="about_task" id="about_task" type="text" class="about_task"></textarea>
             </div>
             <div>
                 <label for="date_task">Срок выполнение задачи</label>
-                <input type="datetime-local" name="date_task" id="date_task">
+                <input type="datetime-local" name="date_task" id="date_task" class="date_task">
+            </div>
+            <div id="but">
+                <input type="button" value="Добавить участника" id="but_task" class="but_task">
             </div>
             <div>
-                <input type="button" value="Добавить участника" id="but_task">
-            </div>
-            <div>
-                <input type="submit" value="Добавить задачу">
+                <input type="submit" value="Добавить задачу" class="but">
             </div>
         </form>
     </div>

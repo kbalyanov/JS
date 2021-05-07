@@ -2,43 +2,22 @@
 
 let loginForm = document.forms["exam"];
 
-let storage = localStorage;
 
+let array = [];
 
-let singleTask = [
-    {
-        name:""
-    },
-    {
-        about:""
-    },
-    { 
-        date:""
-    }
-
-];
-let arrToJson = JSON.stringify(singleTask);
-console.log(singleTask)
-
-storage.setItem("array", arrToJson);
-
-let fromStorage = storage.getItem("array");
-
-let arrFromStorage = JSON.parse(fromStorage);// parse создаст массив а внутри будут обьекты
-console.log(arrFromStorage);
-
-
-storage.setItem("array", JSON.stringify(arrFromStorage));
-
-function objData(forms){
-    let array = [];
+function objData(){
+    
     let singleTask = {
-        name:forms.elements.task.value,
-        about:forms.elements.about_task.value,
-        date:forms.elements.date_task.value,
+        name:exam.elements.task.value,
+        about:exam.elements.about_task.value,
+        date:exam.elements.date_task.value,
+        
     }
     array.push(singleTask)
     console.log(array)
+    let storage = localStorage;
+    let arrToJson = JSON.stringify(array);
+    storage.setItem("array", arrToJson);
 }
 
 
@@ -78,22 +57,17 @@ let addParticipant = document.getElementById("but_task");
 
 addParticipant.addEventListener("click", addParticipants);
 
- function addParticipants(e){ // функция принимает обьект из вне и у себя использеут
-    if(e !== false) {
-    
-      e = document.createElement("input");
-      e.setAttribute("type","text");
-      e.append(e)
-    }
+ function addParticipants(){ // функция принимает обьект из вне и у себя использеут
+     const addPar = document.getElementById("but");
+     const textfhg = document.createElement("div");
+     textfhg.innerHTML = `<input type="text" name="parti" id="parti">`;
+     addPar.appendChild(textfhg);
+
+
     
 };
 
-// function addName(rules){
-//     for(rules of pwdRules){
-//   let  getName = document.createElement("input");
-//   getName.setAttribute("type","text")
-//     }
-// }
+
 
 loginForm.addEventListener("submit", submitForm); 
 function submitForm(event){

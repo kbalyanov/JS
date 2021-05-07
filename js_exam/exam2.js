@@ -1,0 +1,1 @@
+let fromStorage = storage.getItem("array");
